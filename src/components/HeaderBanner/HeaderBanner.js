@@ -1,8 +1,6 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
 import {
   Typography,
-  Box,
   Grid,
   Paper,
   Container,
@@ -16,34 +14,23 @@ const HeaderBanner = () => {
   return (
     <Card elevation={1}>
       <section className="text-gray-600 body-font mt-5">
-        <Container maxWidth="lg" className="mx-auto">
+        <Container maxWidth="xl" className="mx-auto">
           <Grid container spacing={0} alignItems="center">
             <Grid item lg={6} md={6} sm={12} xs={12}>
-              <Paper elevation={0} className="p-4">
-                <Typography
-                  variant="h5"
-                  className="font-medium text-gray-900"
-                  style={{
-                    fontWeight: 600,
-                  }}
-                >
-                  I am
-                  <span
+              <Paper elevation={0} className="p-0">
+                <span className="fw-bold display-5">
+                  I'm Shreyas Bhumkar
+                  <br/>
+                  <span className="color-primary me-2" 
                     style={{
                       color: "#5963a2",
                     }}
                   >
-                    {" "}
-                    Shreyas Bhumkar
-                  </span>
-                </Typography>
-                <Typography
-                  variant="h5"
-                  className="font-medium text-gray-900 fw-bold"
-                >
-                  Front End Developer
-                </Typography>
-                <Typography variant="body2" className="my-3 text-muted fw-bold">
+                    Front End
+                  </span> 
+                  Developer
+                </span>
+                <Typography variant="body1" className="my-3 text-muted fw-bold mx-3">
                   Experience in Creating/Integrating new features,
                   functionality, and capabilities on the website. Produced
                   stunning visual elements of web applications by translating
@@ -69,7 +56,7 @@ const HeaderBanner = () => {
                 alt="hero"
                 src={Vector_4}
                 style={{
-                  width: "100%",
+                  width: "85%",
                   height: "auto",
                 }}
               />

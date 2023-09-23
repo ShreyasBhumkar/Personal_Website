@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col } from "reactstrap";
+// import { Row, Col } from "reactstrap";
 import "../../App.css";
 import { Typography, Grid, Paper, Container, Button } from "@mui/material/";
 
@@ -15,7 +15,8 @@ import skill_7 from "../../assets/Vecor Images/GitHub.jpg";
 import skill_8 from "../../assets/Vecor Images/vs-code.jpg";
 
 const MySkillBanner = () => {
-
+  
+  const [view, setView] = useState("View More")
   const skillCardDataObj = [ 
     {
       image: skill_1,
@@ -51,16 +52,25 @@ const MySkillBanner = () => {
     },
   ];
 
-  // const handleLessOrMore = () => {
-  //   const arr = skillCardDataObj
-  // }
+  const [skillArraySize, setSkillArraySize] = useState([...skillCardDataObj.slice(0, 4)])
+
+  const handleLessOrMore = () => {
+    if (view === "View More") {
+      setSkillArraySize([...skillCardDataObj])
+      setView("View Less")
+    } else {
+      const filtered_skills = skillCardDataObj.slice(0, 4)
+      setSkillArraySize([...filtered_skills])
+      setView("View More")
+    }
+  }
 
   return (
     <section
       className="text-gray-600 body-font"
       style={{ backgroundColor: "#EEEEEE" }}
     >
-      <Container maxWidth="lg" className="mx-auto my-1">
+      <Container maxWidth="xl" className="mx-auto">
         <Grid container spacing={3} alignItems="center">
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Paper
@@ -70,10 +80,10 @@ const MySkillBanner = () => {
                 backgroundColor: "#EEEEEE",
               }}
             >
-              <Typography variant="h5" className="fw-bold" align="center">
+              <Typography variant="h4" className="fw-bold" align="center">
                 My Skills
               </Typography>
-              <Typography variant="body2" className="my-3 text-muted fw-bold">
+              <Typography variant="body1" className="my-3 text-muted fw-bold">
                 That high-end software technologies that are use as following
               </Typography>
             </Paper>
@@ -92,7 +102,7 @@ const MySkillBanner = () => {
             rowSpacing={2}
             columnSpacing={{ xs: 2, sm: 2, md: 2 }}
           >
-            {skillCardDataObj.slice(0, 4).map((obj, id) => (
+            {skillArraySize.map((obj, id) => (
               <SkillCard key={id} Image={obj.image} Title={obj.title} />
             ))}
           </Grid>
@@ -115,8 +125,9 @@ const MySkillBanner = () => {
                     background: "#5963a2",
                   }}
                   className="py-1 px-5 text-lg"
+                  onClick={handleLessOrMore}
                 >
-                  View More
+                  {view}
                 </Button>
               </div>
             </Paper>
