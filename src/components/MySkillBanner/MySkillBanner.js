@@ -16,7 +16,7 @@ import skill_8 from "../../assets/Vecor Images/vs-code.jpg";
 
 const MySkillBanner = () => {
 
-  const skillCardDataObj = [
+  const skillCardDataObj = [ 
     {
       image: skill_1,
       title: "HTML 5",
