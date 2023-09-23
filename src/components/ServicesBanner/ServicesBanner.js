@@ -1,14 +1,10 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
 import "../../App.css";
 import {
   Typography,
-  Box,
   Grid,
   Paper,
   Container,
-  Button,
-  Card,
 } from "@mui/material";
 import ServicesBannerCard from "./Services.card.component";
 import service_1 from "../../assets/Vecor Images/Vector_7.jpg";
@@ -26,7 +22,7 @@ const ServicesBanner = () => {
       image: service_2,
       title: "Ecommerce Development",
       description:
-        "With eCommerce solutions, businesses can operate 24 hours a day, 7 days a week, and reach customers in any time zone",
+        "With eCommerce solutions, businesses can operate 24 hours a day, 7 days a week, and reach customers in any time zone and increase flexibility",
     },
     {
       image: service_3,
@@ -41,7 +37,7 @@ const ServicesBanner = () => {
       className="text-gray-600 body-font"
       style={{ backgroundColor: "#EEEEEE" }}
     >
-      <Container maxWidth="lg" className="mx-auto my-2">
+      <Container maxWidth="xl" className="mx-auto my-2">
         <Grid container spacing={3} alignItems="center">
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <Paper
@@ -51,10 +47,10 @@ const ServicesBanner = () => {
                 backgroundColor: "#EEEEEE",
               }}
             >
-              <Typography variant="h5" className="fw-bold" align="center">
+              <Typography variant="h4" className="fw-bold" align="center">
                 My Services
               </Typography>
-              <Typography variant="body2" className="my-3 text-muted fw-bold">
+              <Typography variant="body1" className="my-3 text-muted fw-bold">
                 As front end developer I am responsible to build Web
                 Applications, responsive web design, UI using HTML5 & grid,
                 browser compatible pages using HTML5, CSS3, Bootstrap, and

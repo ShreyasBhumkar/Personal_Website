@@ -1,17 +1,11 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
 import {
-  Typography,
   Box,
-  Grid,
-  Paper,
-  Container,
-  Button,
-  Card,
 } from "@mui/material";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import ServicesBanner from "../ServicesBanner/ServicesBanner";
 import MySkillBanner from "../MySkillBanner/MySkillBanner";
+import FooterBanner from "../FooterBanner/FooterBanner";
 
 const WebsiteContents = () => {
   return (
@@ -21,6 +15,7 @@ const WebsiteContents = () => {
         <ServicesBanner />
         <MySkillBanner />
       </Box>
+        <FooterBanner />
     </React.Fragment>
   );
 };

@@ -1,13 +1,11 @@
 import React from "react";
 import {
   Typography,
-  Box,
   Grid,
   Paper,
 } from "@mui/material/";
 import { Row, Col } from "reactstrap";
 import { styled } from "@mui/material/styles";
-import skill_8 from "../../assets/Vecor Images/vs-code.jpg";
 const SkillCard = ({
     Image,
     Title
